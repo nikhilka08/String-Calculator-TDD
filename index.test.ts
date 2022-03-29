@@ -39,6 +39,11 @@ describe("String addition calculator", () => {
       const result = add("//;1;2");
       const expectedValue = 3;
       expect(result).toBe(expectedValue);
+    });
+    test("Given a custom delimiter //; with newline it should return sum", () => {
+      const result = add("//;\n1;2;\n3;4");
+      const expectedValue = 10;
+      expect(result).toBe(expectedValue);
     })
   })
 });
