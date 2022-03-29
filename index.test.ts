@@ -44,6 +44,11 @@ describe("String addition calculator", () => {
       const result = add("//;\n1;2;\n3;4");
       const expectedValue = 10;
       expect(result).toBe(expectedValue);
-    })
-  })
+    });
+    test("Given a custom delimiter //# it should return sum", () => {
+      const result = add("//#\n1#2#3#4");
+      const expectedValue = 10;
+      expect(result).toBe(expectedValue);
+    });
+  });
 });
