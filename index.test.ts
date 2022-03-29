@@ -13,5 +13,12 @@ describe("String addition calculator", () => {
       const expectedValue = 2;
       expect(result).toBe(expectedValue);
     });
+
+    test("Given multiple numbers in string, it should return the sum", () => {
+      const result = add("2,3,4");
+      const expectedValue = 9;
+      expect(result).toBe(expectedValue);
+    })
   });
+
 });
