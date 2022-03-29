@@ -18,7 +18,7 @@ describe("String addition calculator", () => {
       const result = add("2,3,4");
       const expectedValue = 9;
       expect(result).toBe(expectedValue);
-    })
+    });
   });
 
   describe("Newline seperator", () => {
@@ -26,7 +26,11 @@ describe("String addition calculator", () => {
       const result = add("1\n2,3,4");
       const expectedValue = 10;
       expect(result).toBe(expectedValue);
-    })
-  })
-
+    });
+    test("Given multiple newline in string, it should return the sum", () => {
+      const result = add("1\n2,3\n4,5");
+      const expectedValue = 15;
+      expect(result).toBe(expectedValue);
+    });
+  });
 });
