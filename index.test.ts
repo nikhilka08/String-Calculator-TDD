@@ -51,4 +51,12 @@ describe("String addition calculator", () => {
       expect(result).toBe(expectedValue);
     });
   });
+
+  describe("Negative numbers should throw error", () => {
+    test("Single Negative number error", () => {
+      expect(() => {
+        add("-1");
+      }).toThrow("negatives not allowed -1");
+    });
+  });
 });
