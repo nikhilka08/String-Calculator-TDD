@@ -58,5 +58,17 @@ describe("String addition calculator", () => {
         add("-1");
       }).toThrow("negatives not allowed -1");
     });
+
+    test("Negative number with delimiter error", () => {
+      expect(() => {
+        add("//;\n-1;2;\n3");
+      }).toThrow("negatives not allowed -1");
+    });
+
+    test("Multiple negative number with delimiter error", () => {
+      expect(() => {
+        add("//;\n-1;2;\-3");
+      }).toThrow("negatives not allowed -1,-3");
+    });
   });
 });
