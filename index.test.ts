@@ -33,4 +33,12 @@ describe("String addition calculator", () => {
       expect(result).toBe(expectedValue);
     });
   });
+
+  describe("Custom delimiters", () => {
+    test("Given a custom delimiter //; it should return sum", () => {
+      const result = add("//;1;2");
+      const expectedValue = 3;
+      expect(result).toBe(expectedValue);
+    })
+  })
 });
