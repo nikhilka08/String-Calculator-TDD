@@ -21,4 +21,12 @@ describe("String addition calculator", () => {
     })
   });
 
+  describe("Newline seperator", () => {
+    test("Given newline in string, it should return the sum", () => {
+      const result = add("1\n2,3,4");
+      const expectedValue = 10;
+      expect(result).toBe(expectedValue);
+    })
+  })
+
 });
